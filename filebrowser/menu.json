@@ -1,0 +1,40 @@
+{
+	"items": [
+		{
+			"name": "File Browser",
+			"priority": -1,
+			"items": [
+				{
+					"name": "Start",
+					"priority": 1,
+					"action": "./start.sh",
+					"param": ""
+				},
+					{
+					"name": "Start (Auth)",
+					"priority": 2,
+					"action": "./start_auth.sh",
+					"param": ""
+				},
+				{
+					"name": "Reset",
+					"priority": 3,
+					"action": "rm ./filebrowser.db",
+					"param": ""
+				},
+				{
+					"name": "Stop",
+					"priority": 4,
+					"action": "killall filebrowser",
+					"param": ""
+				},
+				{
+					"name": "Show Status",
+					"action": "./show_status.sh",
+					"param": "",
+					"exitmenu": false
+				}
+			]
+		}
+	]
+}
