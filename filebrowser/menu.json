@@ -17,22 +17,23 @@
 					"param": ""
 				},
 				{
-					"name": "Reset",
+					"name": "Show Status",
 					"priority": 3,
-					"action": "rm ./filebrowser.db",
-					"param": ""
+					"action": "./show_status.sh",
+					"param": "",
+					"exitmenu": false
 				},
 				{
-					"name": "Stop",
+					"name": "Kill",
 					"priority": 4,
 					"action": "killall filebrowser",
 					"param": ""
 				},
 				{
-					"name": "Show Status",
-					"action": "./show_status.sh",
-					"param": "",
-					"exitmenu": false
+					"name": "Reset",
+					"priority": 5,
+					"action": "rm ./filebrowser.db",
+					"param": ""
 				}
 			]
 		}
