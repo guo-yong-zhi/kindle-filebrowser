@@ -14,6 +14,6 @@ Kindle 越狱插件 File Browser 使用说明：
 4. 开启 WEB 服务后，可以在 Kindle 界面的顶部看到 IP 地址，在同一局域网下即可通过浏览器访问此地址。
 5. 服务开启后会阻止屏幕自动关闭，第一次按电源键会关闭filebrowser服务，再按即可正常锁屏休眠。
 
-=======================================================
-
+=======================================================  
+可前往 https://github.com/filebrowser/filebrowser 下载linux-armv7版本的release，用以更新插件的二进制文件`extensions/filebrowser/filebrowser`  
 详细说明及问题反馈：https://bookfere.com/post/823.html
