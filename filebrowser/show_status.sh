@@ -7,4 +7,4 @@ then
 else
     result="File Browser is not running   "
 fi
-eips 29 3 "$result"
+eips 30 3 "$result"
