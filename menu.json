@@ -7,19 +7,19 @@
 				{
 					"name": "Start",
 					"priority": 1,
-					"action": "./filebrowser_start.sh",
+					"action": "./filebrowser_wrapper.sh sh ./filebrowser_start.sh",
 					"param": ""
 				},
 					{
 					"name": "Start (Auth)",
 					"priority": 2,
-					"action": "./filebrowser_start_auth.sh",
+					"action": "./filebrowser_wrapper.sh sh ./filebrowser_start_auth.sh",
 					"param": ""
 				},
 				{
 					"name": "Start (root path)",
 					"priority": 3,
-					"action": "./filebrowser_start_auth_root.sh",
+					"action": "./filebrowser_wrapper.sh sh ./filebrowser_start_auth.sh /",
 					"param": ""
 				},
 				{
@@ -32,14 +32,16 @@
 				{
 					"name": "Kill",
 					"priority": 5,
-					"action": "./filebrowser_kill.sh",
-					"param": ""
+					"action": "./kill.sh",
+					"param": "",
+					"exitmenu": false
 				},
 				{
 					"name": "Reset",
 					"priority": 6,
 					"action": "rm ./filebrowser.db",
-					"param": ""
+					"param": "",
+					"exitmenu": false
 				}
 			]
 		}
