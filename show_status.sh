@@ -1,5 +1,5 @@
 #!/bin/sh
-
+col=30
 test_process=$(ps aux | grep "[f]ilebrowser")
 if [ -n "$test_process" ]
 then
@@ -7,4 +7,4 @@ then
 else
     result="File Browser is not running   "
 fi
-eips 30 3 "$result"
+eips $col 3 "$result"
