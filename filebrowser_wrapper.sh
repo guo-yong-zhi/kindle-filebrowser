@@ -1,6 +1,7 @@
 #!/bin/sh
 col=30
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+
 # enable wireless if it is currently off
 WIFI_WAS_OFF=0
 if [ 0 -eq `lipc-get-prop com.lab126.cmd wirelessEnable` ]; then
@@ -24,9 +25,17 @@ while :; do
 done > /dev/null &
 
 # waiting for powerButtonPressed
-lipc-set-prop -i com.lab126.powerd preventScreenSaver 1
+PSS_WAS_OFF=0
+if [ 0 -eq `lipc-get-prop com.lab126.powerd preventScreenSaver` ]; then
+	lipc-set-prop -i com.lab126.powerd preventScreenSaver 1
+	PSS_WAS_OFF=1
+fi
 lipc-wait-event  com.lab126.hal powerButtonPressed | read event #it's blocking
-lipc-set-prop -i com.lab126.powerd preventScreenSaver 0
+# Restore PSS status
+if [ 1 -eq $PSS_WAS_OFF ]; then
+	lipc-set-prop -i com.lab126.powerd preventScreenSaver 0
+fi
+
 kill $(jobs -p)
 eips $col 3 "File Browser is turned off.   "
 
@@ -41,5 +50,7 @@ fi
 sleep 1
 eips $col 1 "                     "
 eips $col 3 "                              "
+
+# stop tasks
 killall filebrowser
 ps aux | grep [f]ilebrowser | awk '{print $2}' | xargs -i kill {} > /dev/null
