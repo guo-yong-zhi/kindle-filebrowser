@@ -14,7 +14,7 @@ then
 fi
 if [ "${LATEST_VERSION}" != "${LOCAL_VERSION}" ]
 then
-    echo "latest $LATEST_VERSION, local $LOCAL_VERSION"
+    echo "latest \"$LATEST_VERSION\", local \"$LOCAL_VERSION\""
     ARTIFACT_URL="$repo/releases/download/$LATEST_VERSION/$artifact"
     [ -e "$artifact" ] || wget $ARTIFACT_URL
     if [ -e "$artifact" ]

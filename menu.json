@@ -37,9 +37,16 @@
 					"exitmenu": false
 				},
 				{
-					"name": "Reset",
+					"name": "Update binary file",
 					"priority": 6,
-					"action": "rm ./filebrowser.db",
+					"action": "./update_binfile.sh >log.txt 2>&1; ./viewtxt.sh log.txt",
+					"param": "",
+					"exitmenu": false
+				},
+				{
+					"name": "Reset",
+					"priority": 7,
+					"action": "rm ./filebrowser.db; rm ./BINFILE_VERSION; rm linux-armv7-filebrowser*",
 					"param": "",
 					"exitmenu": false
 				}
