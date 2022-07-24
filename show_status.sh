@@ -1,5 +1,5 @@
 #!/bin/sh
-col=30
+col=$((`cat COL.txt`))
 test_process=$(ps aux | grep "[f]ilebrowser")
 if [ -n "$test_process" ]
 then

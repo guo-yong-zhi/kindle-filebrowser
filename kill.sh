@@ -1,4 +1,4 @@
-col=30
+col=$((`cat COL.txt`))
 eips $col 3 "killing...                    "
 lipc-send-event com.lab126.hal powerButtonPressed
 sleep 5

@@ -1,3 +1,5 @@
+col=$((`cat COL.txt`))
+eips $col 3 "Updating..."
 repo="https://github.com/filebrowser/filebrowser"
 artifact="linux-armv7-filebrowser.tar.gz"
 

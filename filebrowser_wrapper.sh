@@ -1,5 +1,5 @@
 #!/bin/sh
-col=30
+col=$((`cat COL.txt`))
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
 # enable wireless if it is currently off
