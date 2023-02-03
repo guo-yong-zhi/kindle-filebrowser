@@ -1,11 +1,11 @@
 ## 使用方法
 开始以下步骤前需确保你的Kindle已经成功越狱，并安装了KUAL插件。
-1. 下载插件压缩包，解压得到一个文件夹（可重命名），将其拷贝到Kindle根目录下的extensions目录中。
-2. 插件安装完成后，进入Kindle界面，打开KUAL，可以在菜单中找到【File Browser】，可进行如下操作：
-    * 【Start】开启免登录的WEB服务  
-    * 【Start (Auth)】开启带登录验证的WEB服务（默认用户名密码均为：admin）  
-    * 【Start (root path)】开启访问根目录的WEB服务（需手动`mntroot rw`和`mntroot ro`）  
-    * 【Kill】中止后台的WEB服务
+1. 在[发布页面](https://github.com/guo-yong-zhi/kindle-filebrowser/releases)下载插件压缩包（如 `Source code (zip)` ），解压后得到一个文件夹（可重命名），将其拷贝到Kindle根目录下的extensions目录中。
+2. 插件安装完成后，在Kindle上打开KUAL，可以在菜单中找到【File Browser】，可进行如下操作：
+    * 【Start】启动免登录的WEB服务  
+    * 【Start (Auth)】启动带登录验证的WEB服务（默认用户名密码均为：admin）  
+    * 【Start (root path)】启动访问根目录的WEB服务（需手动`mntroot rw`和`mntroot ro`）  
+    * 【Kill】终止后台的WEB服务
     * 【Update binary file】更新二进制文件 
     * 【Reset】删除包含配置信息的数据文件filebrowser.db。谨慎点击  
 
